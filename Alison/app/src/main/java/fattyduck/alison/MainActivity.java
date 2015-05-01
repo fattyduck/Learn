@@ -4,10 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
 import android.graphics.Color;
 
 
@@ -20,22 +20,39 @@ public class MainActivity extends ActionBarActivity {
         RelativeLayout duckLayout = new RelativeLayout(this);
         duckLayout.setBackgroundColor(Color.GREEN);
 
+        Button redButton = new Button(this);
+        redButton.setText("Log in");
+        redButton.setBackgroundColor(Color.RED);
+        redButton.setTextColor(Color.WHITE);
+
+        EditText username = new EditText(this);
+
+        redButton.setId(1);
+        username.setId(2);
+
         RelativeLayout.LayoutParams buttonDetails = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
+          RelativeLayout.LayoutParams.WRAP_CONTENT,
+          RelativeLayout.LayoutParams.WRAP_CONTENT
         );
+
+        RelativeLayout.LayoutParams usernameDetails = new RelativeLayout.LayoutParams(
+          RelativeLayout.LayoutParams.WRAP_CONTENT,
+          RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        usernameDetails.addRule(RelativeLayout.ABOVE, redButton.getId());
+        usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        usernameDetails.setMargins(0,0,0,50);
 
         buttonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         buttonDetails.addRule(RelativeLayout.CENTER_VERTICAL);
 
-        //button
-        Button redButton = new Button(this);
-        redButton.setText("Click me for fun");
-        redButton.setBackgroundColor(Color.RED);
-
 
         duckLayout.addView(redButton, buttonDetails);
+        duckLayout.addView(username, usernameDetails);
+
         setContentView(duckLayout);
+
 
     }
 
