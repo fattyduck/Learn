@@ -16,15 +16,25 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button quackButton = (Button)findViewById(R.id.QuackButton);
+        final Button quackButton = (Button)findViewById(R.id.QuackButton);
 
         quackButton.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View v){
-                        TextView quacktest = (TextView)findViewById(R.id.QuackText);
-                        quacktest.setText("Good job!");
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        TextView quacktext = (TextView) findViewById(R.id.QuackText);
+                        quacktext.setText("Good Job!");
                     }
                 }
+        );
+
+        quackButton.setOnLongClickListener(
+          new Button.OnLongClickListener(){
+              public boolean onLongClick(View v){
+                  TextView tv = (TextView)findViewById(R.id.QuackText);
+                  tv.setText("Good Long Job");
+                  return false;
+              }
+          }
         );
     }
 
