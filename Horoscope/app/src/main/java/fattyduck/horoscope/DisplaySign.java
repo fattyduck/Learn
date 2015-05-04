@@ -4,14 +4,27 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
+
 
 
 public class DisplaySign extends ActionBarActivity {
-
+    Spinner drop;
+    TextView text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_sign);
+        drop=(Spinner)findViewById(R.id.sp);
+        text=(TextView)findViewById(R.id.zodiacinfo);
+        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.zodiacArray, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        drop.setAdapter(adapter);
+        drop.setOnItemSelectedListener(new display());
     }
 
 
@@ -20,6 +33,41 @@ public class DisplaySign extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_display_sign, menu);
         return true;
+    }
+    public class display implements AdapterView.OnItemSelectedListener{
+        public void onItemSelected(AdapterView<?> parent,View arg1, int pos, long id ){
+            String str = parent.getItemAtPosition(pos).toString();
+            if(str.equals("Aries")){
+                text.setText(getString(R.string.AriesInfo));
+            }else if(str.equals("Taurus")){
+                text.setText(getString(R.string.TaurusInfo));
+            }else if(str.equals("Gemini")){
+                text.setText(getString(R.string.GeminiInfo));
+            }else if(str.equals("Cancer")){
+                text.setText(getString(R.string.CancerInfo));
+            }else if(str.equals("Leo")){
+                text.setText(getString(R.string.LeoInfo));
+            }else if(str.equals("Virgo")){
+                text.setText(getString(R.string.VirgoInfo));
+            }else if(str.equals("Libra")){
+                text.setText(getString(R.string.LibraInfo));
+            }else if(str.equals("Scorpio")){
+                text.setText(getString(R.string.ScorpiusInfo));
+            }else if(str.equals("Sagittarius")){
+                text.setText(getString(R.string.SagittariusInfo));
+            }else if(str.equals("Capricorn")){
+                text.setText(getString(R.string.CapricornInfo));
+            }else if(str.equals("Aquarius")){
+                text.setText(getString(R.string.AquariusInfo));
+            }else if(str.equals("Pisces")){
+                text.setText(getString(R.string.PiscesInfo));
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
     }
 
     @Override
@@ -37,3 +85,4 @@ public class DisplaySign extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
