@@ -12,5 +12,5 @@
     <string name="userbutton">Your Sign</string>
     <string name="romanbutton">Romance</string>
     <string name="gamebutton">Game</string>
-    <string name="zodiac">Zodiac</string>
+    <string name="zodiac"><b>Zodiac</b></string>
 </resources>
