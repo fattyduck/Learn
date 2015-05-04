@@ -1,5 +1,6 @@
 package fattyduck.horoscope;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,16 +26,21 @@ public class Navigation extends ActionBarActivity {
     }
 
     public void disbut(View v){
+        Intent i = new Intent(this,DisplaySign.class);
+        startActivity(i);
 
     }
     public void userbut(View v){
-
+        Intent i = new Intent(this,UserSign.class);
+        startActivity(i);
     }
     public void romanbut(View v){
-
+        Intent i = new Intent(this,RomanticCalc.class);
+        startActivity(i);
     }
     public void gamebut(View v){
-
+        Intent i = new Intent(this,Game.class);
+        startActivity(i);
     }
 
 }

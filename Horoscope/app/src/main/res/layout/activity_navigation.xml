@@ -30,6 +30,7 @@
         android:id="@+id/signinfobutton"
         android:layout_marginTop="52dp"
         android:layout_below="@+id/navtitle"
+        android:onClick="disbut"
         android:layout_centerHorizontal="true"  />
 
     <Button
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:text="@string/userbutton"
         android:id="@+id/usersignbutton"
+        android:onClick="userbut"
         android:layout_marginTop="47dp"
         android:layout_below="@+id/signinfobutton"
         android:layout_centerHorizontal="true"
@@ -48,6 +50,7 @@
         android:text="@string/romanbutton"
         android:id="@+id/romanbutton"
         android:layout_marginTop="53dp"
+        android:onClick="romanbut"
         android:layout_below="@+id/usersignbutton"
         android:layout_centerHorizontal="true" />
 
@@ -56,6 +59,7 @@
         android:layout_height="wrap_content"
         android:text="@string/gamebutton"
         android:id="@+id/gamebutton"
+        android:onClick="gamebut"
         android:layout_marginTop="44dp"
         android:layout_below="@+id/romanbutton"
         android:layout_centerHorizontal="true"  />
