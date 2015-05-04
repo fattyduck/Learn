@@ -21,6 +21,7 @@
         android:id="@+id/zodiacinfo"
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"
-        android:text="Please Choose From Above"
+        android:scrollbars="vertical"
+        android:maxLines ="20"
         android:layout_below="@+id/sp" />
 </RelativeLayout>

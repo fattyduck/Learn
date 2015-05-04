@@ -10,7 +10,7 @@ import android.widget.Button;
 
 
 public class Navigation extends ActionBarActivity {
-
+    //this is the navigation page
     Button display;
     Button userSign;
     Button roman;

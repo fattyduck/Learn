@@ -2,6 +2,7 @@ package fattyduck.horoscope;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 
 public class DisplaySign extends ActionBarActivity {
+    //this is the Display class (Sign Info)
     Spinner drop;
     TextView text;
     @Override
@@ -21,6 +23,8 @@ public class DisplaySign extends ActionBarActivity {
         setContentView(R.layout.activity_display_sign);
         drop=(Spinner)findViewById(R.id.sp);
         text=(TextView)findViewById(R.id.zodiacinfo);
+        //the setmovement method is to allow my text view to scroll
+        text.setMovementMethod(new ScrollingMovementMethod());
         ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.zodiacArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         drop.setAdapter(adapter);
@@ -35,6 +39,7 @@ public class DisplaySign extends ActionBarActivity {
         return true;
     }
     public class display implements AdapterView.OnItemSelectedListener{
+        //this is to set text to whatever the dropbox is.
         public void onItemSelected(AdapterView<?> parent,View arg1, int pos, long id ){
             String str = parent.getItemAtPosition(pos).toString();
             if(str.equals("Aries")){
