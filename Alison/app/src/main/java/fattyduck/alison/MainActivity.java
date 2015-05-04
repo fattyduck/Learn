@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.graphics.Color;
+import android.content.res.Resources;
+import android.util.TypedValue;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -39,6 +41,12 @@ public class MainActivity extends ActionBarActivity {
           RelativeLayout.LayoutParams.WRAP_CONTENT,
           RelativeLayout.LayoutParams.WRAP_CONTENT
         );
+
+        Resources r = getResources();
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                200,r.getDisplayMetrics());
+
+        username.setWidth(px);
 
         usernameDetails.addRule(RelativeLayout.ABOVE, redButton.getId());
         usernameDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
