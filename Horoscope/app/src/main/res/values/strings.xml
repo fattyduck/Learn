@@ -41,4 +41,20 @@
     <string name="PiscesInfo">Pisces is the twelfth astrological sign in the Zodiac, originating from the Pisces constellation. It spans the 330° to 360° of the zodiac, between 332.75° and 360° of celestial longitude. Under the tropical zodiac the sun transits this area on average between February 19 and March 20 and under the sidereal zodiac, the sun transits this area between approximately March 14 and April 14.</string>
     <string name="month">Month</string>
     <string name="date">Date</string>
+    <string name="AriesSign">You are an Aries</string>
+    <string name="TaurusSign">You are a Tauris</string>
+    <string name="GeminiSign">You are a Gemini</string>
+    <string name="CancerSign">You are a Cancer</string>
+    <string name="LeoSign">You are a Leo</string>
+    <string name="VirgoSign">You are a Virgo</string>
+    <string name="LibraSign">You are a Libra</string>
+     <string name="ScorpiusSign">You are a Scorpio</string>
+    <string name="SagittariusSign">You are a Sagittarius</string>
+    <string name="CapricornSign">You are a Capricorn</string>
+    <string name="AquariusSign">You are an Aquarius</string>
+     <string name="PiscesSign">You are a Pisces</string>
+    <string name="lucky">Today is your lucky day</string>
+    <string name="unlucky">Not so lucky today</string>
+    <string name="soso">Your luck is neither good or bad today</string>
+
 </resources>
