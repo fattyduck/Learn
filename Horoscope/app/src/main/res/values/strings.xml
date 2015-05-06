@@ -56,5 +56,7 @@
     <string name="lucky">Today is your lucky day</string>
     <string name="unlucky">Not so lucky today</string>
     <string name="soso">Your luck is neither good or bad today</string>
+    <string name="urzodiac">Your Zodiac</string>
+    <string name="whozdiac">Whoevers Zodiac</string>
 
 </resources>
