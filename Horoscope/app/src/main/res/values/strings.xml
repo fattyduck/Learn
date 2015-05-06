@@ -58,5 +58,7 @@
     <string name="soso">Your luck is neither good or bad today</string>
     <string name="urzodiac">Your Zodiac</string>
     <string name="whozdiac">Whoevers Zodiac</string>
-
+    <string name="hcomp">You two have high compatibility</string>
+    <string name="lcomp">You two have low compatibility</string>
+    <string name="romancebutton">Find Out!</string>
 </resources>
