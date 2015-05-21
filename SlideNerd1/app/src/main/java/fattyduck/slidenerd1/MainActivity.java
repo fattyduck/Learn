@@ -1,13 +1,10 @@
-package fattyduck.layla;
+package fattyduck.slidenerd1;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -17,13 +14,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
-
-    public void showToast(View v){
+    public void showt(View v){
         Toast toast = Toast.makeText(this, "Hi from fattyduck", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER,0,0);
         toast.show();
     }
 
